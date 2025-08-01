@@ -3,12 +3,12 @@ const Expense = require('../models/expenseModel');
 
 const ExpenseRoute = (app) => {
    app.route("/expenses")
-      .get(ExpenseController.viewAllExpenses)
+      .get(ExpenseController.getAllExpenses)
       .post(ExpenseController.createExpense)
       .delete(ExpenseController.deleteAllExpenses)
 
    app.route("/expenses/:id")
-      .get(ExpenseController.viewExpenseById)
+      .get(ExpenseController.getExpenseById)
       .put(ExpenseController.updateExpense)
       .delete(ExpenseController.deleteExpense)
 }
