@@ -18,7 +18,7 @@ const getExpenseById = async (req, res) => {
       res.status(404).json({ message: 'Expense not found' });
     }
   }
-}
+};
 
 const createExpense = async (req, res) => {
   try {
