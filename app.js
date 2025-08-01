@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true }))
 const mongoose = require('mongoose')
 const db = "mongodb+srv://user1:1234Abcd@cluster0.nm8dlbn.mongodb.net/expense-tracker"
 mongoose.connect(db)
-   .then(console.log('Connect DB succeed !'))
-   .catch(err => console.log('Connect db failed ! ' + err))
+   .then(console.log('Successfully connected to DB'))
+   .catch(err => console.log('Failed to connect to DB ' + err))
 
 const router = require("./api/routes/expenseRoute")
 router(app)
