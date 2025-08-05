@@ -6,9 +6,10 @@ const expenseSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  date: {
-    type: Date,
-    required: true
+  description: {
+    type: String,
+    required: true,
+    trim: true
   },
   amount: {
     type: Number,
@@ -20,11 +21,10 @@ const expenseSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  description: {
-    type: String,
-    required: true,
-    trim: true
-  }
+  date: {
+    type: Date,
+    required: true
+  },
 }, 
 {
   versionKey: false,
